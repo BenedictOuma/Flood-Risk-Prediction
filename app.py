@@ -172,6 +172,16 @@ villages['flood_risk'] = villages.apply(
     rain_thresh=rain_thresh, soil_thresh=soil_thresh
 )
 
+#Allowing the user to download the updated dataset with predictions
+csv_data = villages.drop(columns='geometry').to_csv(index=False)
+
+st.download_button(
+    label="📥 Download CSV with Flood Risk",
+    data=csv_data,
+    file_name="flood_risk_predictions.csv",
+    mime="text/csv"
+)
+
 #Showing distribution
 st.subheader("Flood Risk Distribution")
 st.write(villages['flood_risk'].value_counts())
@@ -182,11 +192,11 @@ model, report = train_model(villages)
 st.subheader("Model Performance")
 st.metric("Overall Accuracy", f"{report['accuracy']:.2%}")
 
-# Display performance as a table
+#Displaying performance as a table
 report_df = pd.DataFrame(report).transpose().drop(columns='support', errors='ignore')
 st.dataframe(report_df.style.format("{:.2f}"))
 
-# Flood Risk Map
+#The flood Risk Map
 st.subheader("Flood Risk Map")
 map_obj = create_map(villages)
 st_folium(map_obj, width=800, height=500)
