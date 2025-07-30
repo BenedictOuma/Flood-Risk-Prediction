@@ -89,11 +89,11 @@ Ensure that your **requirements.txt** and **app.py** are in the root folder befo
 
 ### App Home
 
-![App Home]("C:\Users\Moved Files\Desktop\Git Projects\FLOOD_RISK_PREDICTION\Pics\Screenshot 2025-07-30 191439.png")
+![App Home](Pics/Screenshot%202025-07-30%20192552.png)
 
 ### Interactive Flood Map
 
-![Flood Map]("C:\Users\Moved Files\Desktop\Git Projects\FLOOD_RISK_PREDICTION\Pics\Screenshot 2025-07-30 191852.png")
+![Flood Map](Pics/Screenshot%202025-07-30%20192612.png)
 
 ---
 
