@@ -123,7 +123,20 @@ soil_thresh = st.sidebar.number_input(
     step=0.05
 )
 
-#Filtering by coordinates
+ndvi_thresh = st.sidebar.number_input(
+    "NDVI threshold",
+    -0.1, 1.0,
+    float(villages['ndvi'].quantile(0.5)),  # default = median
+    step=0.05
+)
+
+slope_thresh = st.sidebar.number_input(
+    "Slope threshold (degrees)",
+    0.0, 40.0,
+    float(villages['slope'].quantile(0.5)),  # default = median
+    step=1.0
+)
+
 lon_min, lon_max = st.sidebar.slider(
     "Longitude range",
     float(villages.geometry.x.min()), 
