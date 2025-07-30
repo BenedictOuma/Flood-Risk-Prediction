@@ -100,4 +100,4 @@ Ensure that your **requirements.txt** and **app.py** are in the root folder befo
 ## Author
 
 **Benedict Ouma**
-*"Your Safety Starts Here"*
+"Your Safety Starts Here"
