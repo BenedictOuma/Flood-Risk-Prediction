@@ -176,7 +176,7 @@ villages['flood_risk'] = villages.apply(
 csv_data = villages.drop(columns='geometry').to_csv(index=False)
 
 st.download_button(
-    label="📥 Download CSV with Flood Risk",
+    label="Download CSV with Flood Risk",
     data=csv_data,
     file_name="flood_risk_predictions.csv",
     mime="text/csv"
